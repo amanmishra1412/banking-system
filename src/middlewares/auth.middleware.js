@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.model");
 
-const userLogin = async (req, res, next) => {
+const userLoginCheck = async (req, res, next) => {
     try {
         const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
 
@@ -22,4 +22,4 @@ const userLogin = async (req, res, next) => {
     }
 };
 
-module.exports = userLogin
+module.exports = userLoginCheck

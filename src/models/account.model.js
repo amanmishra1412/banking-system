@@ -9,10 +9,11 @@ const accountSchema = new mongoose.Schema(
             index: true
         },
         status: {
-            enum: {
-                value: ["active", "frozen", "closed"],
-            },
+            type: String,
+            enum: ["active", "frozen", "closed"],
+            default: "active"
         },
+
         currency: {
             type: String,
             required: [true, "currency is required"],
