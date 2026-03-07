@@ -22,6 +22,12 @@ const userSchema = new mongoose.Schema(
             required: [true, "Password is required"],
             select: false,
         },
+        systemUser: {
+            type: Boolean,
+            default: false,
+            immutable: true,
+            select: false
+        }
     },
     { timestamps: true },
 );
